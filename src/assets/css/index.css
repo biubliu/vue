@@ -1,0 +1,23 @@
+.nav{
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.28rem;
+    background: #fff;
+}
+.nav .tabs{
+    background: #fff;
+    height: 0.8rem;
+    overflow: hidden;
+}
+.nav .tabs li{
+    float: left;
+    color: #808080;
+    margin: 0rem 0.43rem;
+    font-size: 0.28rem;
+    padding: 0 0.22rem;
+}
+.nav .tabs li.active{
+    border-bottom: 0.06rem solid #202020;
+    color: #000;
+    height: 0.74rem;
+}

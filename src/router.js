@@ -1,23 +1,54 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Router from 'vue-router' 
 
 Vue.use(Router)
 
+import index from './components/index';
+import sort from './components/sort';
+import buycar from './components/buycar';
+import news from './components/news';
+import user from './components/user';
+import login from './components/login';
+import res from './components/res';
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home
+      path: '/index', 
+      component:index
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path:'/',
+      redirect:'/index'//配置型跳转
+    },
+    {
+      path:'/sort',
+      name:sort,
+      component:sort
+    },
+    {
+      path:'/buycar',
+      name:buycar,
+      component:buycar
+    },
+    {
+      path:'/news',
+      name:news,
+      component:news
+    },
+    {
+      path:'/user',
+      name:user,
+      component:user
+    },
+    {
+      path:'/login',
+      name:login,
+      component:login
+    },
+    {
+      path:'/res',
+      name:res,
+      component:res
     }
   ]
 })
